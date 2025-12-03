@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaui Shuttles // Mountain Transfer Experts</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import the Inter font for a modern, clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background (Slate 50) */
+            color: #1e293b; /* Dark text (Slate 800) */
+            line-height: 1.6; /* Better readability */
+        }
+
+        /* Subtle, modern shadow effect */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the embedded Zaui widget wrapper */
+        .zaui-widget-wrapper {
+            /* Max width to keep the form readable, but fluid */
+            max-width: 100%; 
+            min-height: 550px; /* Ensure enough space for the form */
+            overflow: hidden;
+            margin-top: -1rem; /* Adjust positioning */
+        }
+
+        .zaui-widget {
+            width: 100%;
+            height: 100%;
+            min-height: 550px;
+        }
+        
+        /* Utility for the primary accent text */
+        .text-accent {
+            color: #4f46e5; /* Indigo 600 */
+        }
+
+        /* Custom style for the dramatic image section */
+        .dramatic-bg {
+            background-image: url('https://mountaineerlodge.com/uploads/images/_largeCrop/a22-028504-Medium-Res-JPG.jpg?v=1760978409');
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: fixed; /* Parallax effect for depth */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header/Navigation Bar -->
+    <header class="p-5 border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-10 card-shadow">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight text-slate-800">
+                Zaui<span class="text-accent">Shuttles</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#" class="hover:text-accent transition duration-200">Routes</a>
+                <a href="#" class="hover:text-accent transition duration-200">Fleet</a>
+                <a href="#" class="hover:text-accent transition duration-200">Destinations</a>
+                <a href="#" class="text-white bg-accent px-4 py-2 rounded-full hover:bg-indigo-700 transition duration-300 shadow-md">Book Now</a>
+            </nav>
+            <button class="md:hidden text-slate-600 hover:text-accent">
+                <!-- Hamburger Icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="py-16 md:py-24 px-4">
+        
+        <!-- Hero Section & Booking System (Split Layout) -->
+        <section class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+            
+            <!-- Left: Headline, Description, and Image -->
+            <div class="space-y-8 lg:pt-4">
+                <div class="space-y-6">
+                    <p class="text-sm font-semibold text-accent uppercase tracking-wider">
+                        Powered by Zaui's Industry-Leading Booking Engine
+                    </p>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-snug text-slate-900">
+                        Mountain Transfers. <span class="text-accent">Seamlessly</span> Booked.
+                    </h1>
+                    <p class="text-slate-600 text-xl max-w-lg">
+                        Experience the ultimate in travel predictability and customer convenience with Zaui Shuttles. Our platform, backed by Zaui's powerful engine, handles everything from dynamic pricing to route optimization.
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <button class="bg-accent hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-lg shadow-indigo-500/30">
+                            Check Live Schedule
+                        </button>
+                        <button class="border border-slate-300 hover:border-accent text-slate-600 hover:text-accent py-3 px-6 rounded-full transition duration-300">
+                            Group Bookings
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- High-End Image (Yellow Bus Ahead) -->
+                <div class="mt-12 rounded-xl overflow-hidden shadow-2xl card-shadow">
+                    <img src="https://cdn.prod.website-files.com/68d0f19cda95556b8fe4c233/6900c34c559b29bd6939c2e6_yellow-bus-ahead.webp" 
+                         alt="A high-end transfer bus driving through a mountain road, symbolizing efficient travel." 
+                         class="w-full h-auto object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x450/475569/94a3b8?text=Luxury+Vehicle+Placeholder';"
+                    />
+                </div>
+            </div>
+
+            <!-- Right: Booking Engine (The "Optimization Engine") -->
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate-100 card-shadow space-y-6 lg:mt-0">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-4 mb-2 border-slate-100">
+                    Booking Engine (Powered by Zaui)
+                </h2>
+                
+                <!-- Embedded Zaui Booking Widget -->
+                <div class="zaui-widget-wrapper">
+                    <iframe id="zaui-widget-journey-iframe" 
+                            class="zaui-widget" 
+                            src="https://Zauishuttle.zaui.net/booking/web/#/1/widget/journey?embedStyle=embeddedframe" 
+                            title="Journey Widget" 
+                            frameBorder="0" 
+                            scrolling="no">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- New Dramatic Mountain Section -->
+        <section class="max-w-full mt-28 dramatic-bg py-24 md:py-32 text-white">
+            <div class="max-w-7xl mx-auto text-center bg-black/40 p-8 rounded-xl">
+                <p class="text-sm font-semibold uppercase tracking-widest text-indigo-300 mb-3">
+                    Destination Excellence
+                </p>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Welcome to the Rockies.
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    From the airport to the slopes, rely on Zaui Shuttles to guarantee your schedule and comfort. Our route optimization ensures you spend less time travelling and more time experiencing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section - Data-Driven Modules (Zaui Sales Pitch) -->
+        <section class="max-w-7xl mx-auto mt-28">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-slate-900">
+                The Power of the Zaui Platform
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Predictive ETA / Smart Pricing -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 card-shadow space-y-3">
+                    <div class="text-4xl text-accent">
+                        <!-- Icon: Clock/Time (Inline SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Dynamic Pricing & Availability</h3>
+                    <p class="text-slate-600 text-base">
+                        Zaui's smart yield management ensures we offer the best value while optimizing every available seat, maximizing revenue efficiency.
+                    </p>
+                </div>
+
+                <!-- Card 2: Operational Efficiency (Image) -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 card-shadow space-y-3">
+                    <!-- Image of Operational Efficiency -->
+                    <img src="https://cdn.prod.website-files.com/68d0f19cda95556b8fe4c233/68ff6a291c493b1e1ca3c19b_operational-efficency-p-800.webp" 
+                         alt="Chart showing operational efficiency" 
+                         class="w-full h-auto object-cover rounded-lg mb-2"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x200/4f46e5/ffffff?text=Operational+Efficiency';"
+                    />
+                    <h3 class="text-xl font-bold text-slate-800">Unmatched Operational Control</h3>
+                    <p class="text-slate-600 text-base">
+                        The integrated back-end system provides real-time fleet visibility and resource allocation to handle any demand surge flawlessly.
+                    </p>
+                </div>
+                
+                <!-- Card 3: Enterprise Reliability -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 card-shadow space-y-3">
+                    <div class="text-4xl text-accent">
+                        <!-- Icon: Shield/Security (Inline SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Maximized Conversion Rates</h3>
+                    <p class="text-slate-600 text-base">
+                        The seamless and trusted Zaui checkout process reduces cart abandonment, turning more visitors into confirmed bookings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section - Final Directive (Zaui Sales Card Image) -->
+        <section class="max-w-7xl mx-auto mt-28">
+            <div class="grid lg:grid-cols-2 bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-indigo-100/50 overflow-hidden">
+                <div class="p-12 md:p-16 space-y-6 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+                        Convert Your Visitors Into Bookings.
+                    </h2>
+                    <p class="text-slate-600 text-lg">
+                        The Zaui engine is designed to handle high-volume transactions with ease, giving Zaui Shuttles the operational confidence to scale our business rapidly.
+                    </p>
+                    <button class="w-full sm:w-auto bg-accent hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-full text-xl transition duration-300 shadow-lg shadow-indigo-500/40">
+                        Book Your Optimized Journey Now
+                    </button>
+                </div>
+                <div class="relative min-h-[300px] lg:min-h-full">
+                    <img src="https://cdn.prod.website-files.com/68d0f19cda95556b8fe4c233/68ff6a5e641540b548658bfa_sale-card-p-800.webp" 
+                         alt="Image showing a sales growth chart" 
+                         class="absolute inset-0 w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/4f46e5/ffffff?text=Zaui+Sales+Card';"
+                    />
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer - System Status Panel -->
+    <footer class="mt-24 border-t border-slate-200 bg-slate-50 p-8">
+        <div class="max-w-7xl mx-auto text-center space-y-4">
+            <p class="text-slate-600 text-sm">
+                Zaui Shuttles is a service powered by Zaui Software. &copy; 2024. All Rights Reserved.
+            </p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-500">
+                <a href="#" class="hover:text-accent">Zaui Solutions</a>
+                <a href="#" class="hover:text-accent">Terms of Service</a>
+                <a href="#" class="hover:text-accent">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
